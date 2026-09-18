@@ -1,4 +1,3 @@
-
 # bpns-workflow-local
 
 This is exercise 2 from onboarding: running the EMO-BON data pipeline **locally**, step by step, instead of letting GitHub do it automatically.
@@ -72,12 +71,31 @@ python action.py
 
 ---
 
+## Vocabularies used in EMO-BON RO-Crates
+
+EMO-BON's semantic uplift (Phase 3) combines several standard vocabularies, each covering a different part of the data:
+
+- **Dublin Core / schema.org** – describes the dataset/crate as a whole: who created it, when, under what license, what it's called
+  - Dublin Core: https://www.dublincore.org/
+  - schema.org: https://schema.org/docs/gs.html
+
+- **SOSA (Sensor, Observation, Sample, and Actuator)** – describes the sampling process itself: what device was used, what procedure, what feature of interest was being sampled
+  - https://www.w3.org/TR/vocab-ssn/
+
+- **Darwin Core** – describes the biological content that resulted: species found, taxonomy, abundance, collection event details
+  - https://dwc.tdwg.org/
+
+Together: Dublin Core/schema.org answers "what is this dataset and who made it," SOSA answers "how was the sample taken," and Darwin Core answers "what biology did we find."
+
+---
+
 ## Progress
 
 - [x] Step 1: local environment set up
 - [x] Step 2: found and read `populate-action`
 - [x] Step 3: found the 3 BPNS logsheet URLs
-- [x] Step 4: install dependencies
+- [x] Step 4: install dependenci
+es
 - [x] Step 5: set env vars and run
 - [x] Step 6: verify output CSVs
 - [ ] Phase 2: validate CSVs
